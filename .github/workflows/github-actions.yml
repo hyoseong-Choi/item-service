@@ -53,6 +53,7 @@ jobs:
           host: ${{ secrets.HOST_EC2 }}
           username: ec2-user
           password: ${{ secrets.PASSWORD }}
+          port: 22
           script: |
             sudo docker rm -f $(docker ps -qa)
             sudo docker pull ${{ secrets.DOCKER_REPO }}
