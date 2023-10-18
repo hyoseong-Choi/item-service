@@ -58,3 +58,4 @@ jobs:
             sudo docker rm -f $(docker ps -qa)
             sudo docker pull ${{ secrets.DOCKER_REPO }}
             docker image prune -f
+            docker run --name test -d -p 8080:8080 chlgytjd/itemservice
